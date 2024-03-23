@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition: 0.3s ease-in;
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
+.header {
+    background-color: #3636af;
+    height: 160px;
+}
+.header::before {
+    background-image: url(../img/bg-1.png);
+    content: "";
+    position: absolute;
+    mix-blend-mode: luminosity;
+    /* z-index: -1; */
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+}
+.navshow {
+    transition: 0.5s ease;
+    display: flex;
+}
+.sideshow {
+    left: 0;
+}
+.headerNav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 7;
+    background-color: #3636af;
+}
+@media screen and (min-width: 768px) {
+    .headerNav {
+        padding-left: 7rem !important;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .headerNav {
+        padding-left: 17rem !important;
+    }
+}
+.naveLink {
+    color: #3636af;
+}
+.logoout {
+    color: red !important;
+}
